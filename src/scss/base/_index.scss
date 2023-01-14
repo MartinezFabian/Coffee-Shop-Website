@@ -1,0 +1,4 @@
+//@forward solo sirve para incluir los archivos scss no para compilarlos como @use
+// usamos @forward como indice
+@forward "normalize";
+@forward "variables";
