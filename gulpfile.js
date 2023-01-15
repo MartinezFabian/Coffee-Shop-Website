@@ -15,16 +15,25 @@ function css(done) {
   done(); // indica que aqui acaba la tarea
 }
 
+//Tarea para tratamiento de imagenes
+function images(done) {
+  src("src/img/**/*").pipe(dest("build/img"));
+
+  done(); // indica que aqui acaba la tarea
+}
+
 // Watch
 
 function dev() {
   //watch("ruta archivo que queremos que escuche", función a ejecutar si se produjo un cambio en el archivo);
   watch("src/scss/**/*.scss", css); //usamos un comodin para que busque todos los archivos .scss
+  watch("src/img/**/*", images);
 }
 
 // exports.nombreParaLlamarTarea = nombreFuncion;
 exports.css = css; //usamos exports para que sea ejecutable por Gulp
 exports.dev = dev;
+exports.images = images;
 
-exports.default = series(css, dev);
+exports.default = series(images, css, dev);
 //exports.default = parallel(css, dev);
