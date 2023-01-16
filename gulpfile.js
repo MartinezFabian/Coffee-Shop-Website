@@ -9,6 +9,7 @@ const autoprefixer = require("autoprefixer");
 //dependencias Imagenes
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
+const avif = require("gulp-avif");
 
 function css(done) {
   // identificar archivo scss, luego compilarlo y por ultimo guardar el .css
@@ -31,7 +32,22 @@ function images(done) {
 
 //Tarea para convertir imagenes en webp
 function convertToWebp(done) {
-  src("src/img/**/*.{png,jpg}").pipe(webp()).pipe(dest("build/img"));
+  const options = {
+    quality: 50,
+  };
+
+  src("src/img/**/*.{png,jpg}").pipe(webp(options)).pipe(dest("build/img"));
+
+  done();
+}
+
+//Tarea para convertir imagenes en avif
+function convertToAvif(done) {
+  const options = {
+    quality: 50,
+  };
+
+  src("src/img/**/*.{png,jpg}").pipe(avif(options)).pipe(dest("build/img"));
 
   done();
 }
@@ -49,6 +65,7 @@ exports.css = css; //usamos exports para que sea ejecutable por Gulp
 exports.dev = dev;
 exports.images = images;
 exports.convertToWebp = convertToWebp;
+exports.convertToAvif = convertToAvif;
 
-exports.default = series(images, convertToWebp, css, dev);
+exports.default = series(images, convertToWebp, convertToAvif, css, dev);
 //exports.default = parallel(css, dev);
