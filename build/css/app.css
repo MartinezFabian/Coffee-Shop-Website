@@ -348,6 +348,12 @@ img {
   height: auto;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .text-center {
   text-align: center;
 }
@@ -359,7 +365,7 @@ img {
 h1,
 h2,
 h3 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Raleway", sans-serif;
   margin: 0 0 5rem 0;
   text-transform: uppercase;
   text-align: center;
@@ -491,4 +497,32 @@ h3 {
     padding: 10rem;
     margin-top: -10rem;
   }
+}
+
+.icons {
+  margin-top: 5rem;
+}
+.icons .list-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .icons .list-icons {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.icons .list-icons li img {
+  width: 12rem;
+}
+@media (min-width: 768px) {
+  .icons .list-icons li img {
+    width: 20rem;
+  }
+}
+.icons .list-icons li p {
+  font-family: "Bona Nova", serif;
+  font-size: 3.2rem;
+  color: #5e312e;
 }
