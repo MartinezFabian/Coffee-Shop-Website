@@ -500,7 +500,7 @@ h3 {
 }
 
 .icons {
-  margin-top: 5rem;
+  margin: 5rem 0;
 }
 .icons .list-icons {
   display: flex;
@@ -518,7 +518,7 @@ h3 {
 }
 @media (min-width: 768px) {
   .icons .list-icons li img {
-    width: 20rem;
+    width: 16rem;
   }
 }
 .icons .list-icons li p {

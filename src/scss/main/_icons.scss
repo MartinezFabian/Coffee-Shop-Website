@@ -2,7 +2,7 @@
 @use "../base/mixins" as m;
 
 .icons {
-  margin-top: 5rem;
+  margin: 5rem 0;
 
   .list-icons {
     display: flex;
@@ -19,7 +19,7 @@
         width: 12rem;
 
         @include m.tablet {
-          width: 20rem;
+          width: 16rem;
         }
       }
 
