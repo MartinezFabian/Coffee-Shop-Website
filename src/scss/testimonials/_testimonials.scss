@@ -3,11 +3,10 @@
 
 .testimonials {
   background-color: v.$white;
-
   padding: 10rem 2rem;
 
   @include m.tablet {
-    padding: 10rem;
+    padding: 16rem 10rem;
   }
 
   .testimonial {

@@ -1,0 +1,54 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.footer {
+  background-color: v.$primary-color;
+  padding: 16rem 0 5rem 0;
+
+  background-image: url(../img/menu_arriba.svg);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position: top center;
+
+  @include m.tablet {
+    background-size: 100%;
+  }
+
+  @include m.desktop {
+    padding: 25rem 0 5rem 0;
+
+    background-size: 50%;
+  }
+
+  h3,
+  p,
+  a {
+    color: v.$white;
+  }
+
+  .copyright {
+    text-align: center;
+    margin-top: 5rem;
+    font-weight: 700;
+  }
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  @include m.tablet {
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 0;
+  }
+
+  .footer-box {
+    text-align: center;
+
+    h3 {
+      margin: 0;
+    }
+  }
+}
