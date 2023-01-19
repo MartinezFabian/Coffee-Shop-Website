@@ -1,0 +1,35 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.testimonials {
+  background-color: v.$white;
+
+  padding: 10rem 2rem;
+
+  @include m.tablet {
+    padding: 10rem;
+  }
+
+  .testimonial {
+    background-color: v.$light-gray;
+    padding: 2rem;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 1rem;
+    font-family: v.$italic-font;
+    font-size: 1.8rem;
+    box-shadow: 15px 13px 17px -5px rgba(158, 158, 158, 0.4);
+    -webkit-box-shadow: 15px 13px 17px -5px rgba(158, 158, 158, 0.4);
+    -moz-box-shadow: 15px 13px 17px -5px rgba(158, 158, 158, 0.4);
+
+    @include m.tablet {
+      max-width: 50rem;
+    }
+
+    .author {
+      text-align: right;
+      color: v.$primary-color;
+      font-size: 2.4rem;
+    }
+  }
+}
