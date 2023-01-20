@@ -1,0 +1,41 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.coffee-process {
+  margin-bottom: 5rem;
+
+  @include m.tablet {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  //even -> números pares
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .image,
+  .text {
+    flex: 1;
+  }
+
+  .text {
+    margin-top: 1rem;
+
+    h3 {
+      color: v.$primary-color;
+      margin: 0;
+      text-align: left;
+
+      &::after {
+        content: "";
+        background-color: v.$secondary-color;
+        display: block;
+        width: 50%;
+        height: 5px;
+      }
+    }
+  }
+}
