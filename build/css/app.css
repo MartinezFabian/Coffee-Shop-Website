@@ -844,3 +844,27 @@ h3 {
   width: 50%;
   height: 5px;
 }
+
+.content-menu {
+  background-image: url("../img/cafe.jpg");
+  background-repeat: no-repeat;
+  background-size: 35rem;
+  background-position: center bottom;
+  padding-bottom: 26rem;
+}
+@media (min-width: 768px) {
+  .content-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding-bottom: 16rem;
+    background-position: right bottom;
+  }
+}
+.content-menu .text p {
+  font-size: 2rem;
+}
+
+.container-menu {
+  padding-bottom: 0;
+}
