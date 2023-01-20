@@ -1,0 +1,41 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.about-content {
+  @include m.tablet {
+    @include m.grid(2, 5rem);
+    align-items: center;
+  }
+
+  .image {
+    margin-bottom: 5rem;
+    padding: 2rem;
+
+    @include m.tablet {
+      margin-bottom: 0;
+      padding: 0;
+    }
+
+    img {
+      transform: rotate(-6deg);
+      border: 3rem solid v.$white;
+      box-shadow: 9px 10px 5px -7px rgb(0 0 0 / 0.35);
+    }
+  }
+
+  .text {
+    p {
+    }
+
+    blockquote {
+      font-size: 2rem;
+      margin: 0;
+      padding: 1rem;
+      border-left: 0.5rem solid v.$primary-color;
+    }
+  }
+}
+
+.about-us {
+  padding-bottom: 15rem;
+}
