@@ -462,6 +462,11 @@ h3 {
   background-attachment: fixed;
 }
 
+.header-menu {
+  background-image: url(../img/header_menu.jpg);
+  background-attachment: fixed;
+}
+
 .main-nav {
   display: flex;
   flex-direction: column;
