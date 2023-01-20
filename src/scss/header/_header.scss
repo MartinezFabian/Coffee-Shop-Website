@@ -34,9 +34,17 @@
       margin-top: 10rem;
     }
   }
+
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .header-home {
   background-image: url(../img/header_inicio.jpg);
+  background-attachment: fixed;
+}
+
+.header-about {
+  background-image: url(../img/header_nosotros.jpg);
   background-attachment: fixed;
 }
