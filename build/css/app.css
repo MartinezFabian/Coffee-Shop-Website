@@ -467,6 +467,12 @@ h3 {
   background-attachment: fixed;
 }
 
+.header-gallery {
+  background-image: url(../img/header_galeria.jpg);
+  background-attachment: fixed;
+  background-position: right;
+}
+
 .main-nav {
   display: flex;
   flex-direction: column;
