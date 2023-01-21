@@ -39,7 +39,25 @@
 
       <div class="about-content">
         <div class="image">
-          <img src="build/img/nosotros_sidebar.jpg" alt="imagen nosotros" />
+          <picture>
+            <source
+              srcset="build/img/nosotros_sidebar.avif"
+              type="image/avif"
+            />
+            <source
+              srcset="build/img/nosotros_sidebar.webp"
+              type="image/webp"
+            />
+            <source srcset="build/img/nosotros_sidebar.jpg" type="image/jpeg" />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="build/img/nosotros_sidebar.jpg"
+              alt="imagen"
+              width="500"
+              height="300"
+            />
+          </picture>
         </div>
         <div class="text">
           <p>
