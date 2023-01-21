@@ -473,6 +473,11 @@ h3 {
   background-position: right;
 }
 
+.header-contact {
+  background-image: url(../img/header_contacto.jpg);
+  background-attachment: fixed;
+}
+
 .main-nav {
   display: flex;
   flex-direction: column;
