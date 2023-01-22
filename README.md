@@ -1,3 +1,3 @@
-# Coffee-Shop-Website
+Coffee Shop Website using Sass and Gulp, following the mobile first approach.
 
-Coffee Shop Website using Sass
+Web deployed: https://martinezfabian.github.io/Coffee-Shop-Website/
